@@ -7,11 +7,21 @@ int main() {
     bn::core::init();
     bn::backdrop::set_color(bn::color(20, 20, 31));
 
-    if (bn::keypad::a_pressed()) {
-        bn::backdrop::set_color(bn::color(31, 20, 20));
-    }
+    
 
     while(true) {
+        if (bn::keypad::a_pressed()) {
+            bn::backdrop::set_color(bn::color(31, 21, 22));
+        }
+
+        if (bn::keypad::b_pressed()) {
+            bn::backdrop::set_color(bn::color(31, 31, 31));
+        }
+
+        if (bn::keypad::left_pressed()) {
+            bn::backdrop::set_color(bn::color(20, 20, 31));
+        }
+
         bn::core::update();
     }
 }
